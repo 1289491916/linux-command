@@ -1,7 +1,7 @@
 journalctl
 ===
 
-检索 systemd 日志，是 CentOS 7 才有的工具。
+用于检索 systemd 托管的日志。
 
 ### 语法
 
@@ -129,6 +129,13 @@ journalctl _PID=1
 ```shell
 journalctl -u man-db.service
 ```
+
+显示指定单元的最新100行实时刷新消息：
+
+```shell
+journalctl -u man-db.service -n 1000 -f
+```
+
 
 显示内核环缓存消息r:
 
